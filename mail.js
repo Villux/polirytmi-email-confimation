@@ -11,7 +11,7 @@ generator.on('token', function(token){
 });
 
 var mail = {};
-// create reusable transporter object using SMTP transport
+// Create reusable transporter object using SMTP transport
 var transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
@@ -20,19 +20,10 @@ var transporter = nodemailer.createTransport({
 });
 
 // No need to recreate the transporter object. You can use
-// the same transporter object for all e-mails
+// The same transporter object for all e-mails
 
-// setup e-mail data with unicode symbols
-var mailOptions = {
-    from: 'Teuvo Testaaja ✔ <' + process.env.MAIL_ADDRESS + '>', // sender address
-    to: process.env.MAIL_TEST_ADDRESS, // list of receivers
-    subject: 'Hello ✔', // Subject line
-    text: 'Hello world ✔', // plaintext body
-    html: '<b>Hello world ✔</b>' // html body
-};
-
-mail.sendMail = function() {
-  // send mail with defined transport object
+mail.sendMail = function(mailOptions) {
+  // Send mail with defined transport object
   transporter.sendMail(mailOptions, function(error, info){
       if(error){
         console.log('error');
@@ -42,6 +33,5 @@ mail.sendMail = function() {
 
   });
 }
-
 
 module.exports = mail;

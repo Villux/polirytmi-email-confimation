@@ -1,18 +1,20 @@
+// Load env first
+var env = require('./env');
+
 var express = require('express');
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
 var requests   = require('./requests');
 // App
 var app = express();
 
-// create application/json parser
+// Create application/json parser
 var jsonParser = bodyParser.json();
-// create application/x-www-form-urlencoded parser
+// Create application/x-www-form-urlencoded parser
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 app.get('/', function (req, res) {
   res.send('Hello World!');
 });
-
 
 // POST Command from Slack
 app.post('/', urlencodedParser, function (req, res) {
