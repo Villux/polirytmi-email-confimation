@@ -1,0 +1,21 @@
+{
+  "name": "gig-confirmer",
+  "version": "1.0.0",
+  "description": "Send email to all Slack channel participants",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.3",
+    "body-parser": "^1.13.3",
+    "email-templates": "^2.0.1",
+    "lodash": "^3.10.1",
+    "xoauth2": "^1.1.0",
+    "nodemailer": "^1.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "VilleT",
+  "license": "ISC"
+}
