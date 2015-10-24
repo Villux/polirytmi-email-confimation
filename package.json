@@ -4,12 +4,12 @@
   "description": "Send email to all Slack channel participants",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.13.3",
     "body-parser": "^1.13.3",
-    "email-templates": "^2.0.1",
+    "express": "^4.13.3",
     "lodash": "^3.10.1",
-    "xoauth2": "^1.1.0",
-    "nodemailer": "^1.4.0"
+    "nodemailer": "^1.4.0",
+    "q": "^1.4.1",
+    "xoauth2": "^1.1.0"
   },
   "devDependencies": {},
   "scripts": {

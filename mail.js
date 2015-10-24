@@ -15,7 +15,7 @@ var mail = {};
 var transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-        xoauth2: generator
+      xoauth2: generator
     }
 });
 
@@ -23,14 +23,15 @@ var transporter = nodemailer.createTransport({
 // The same transporter object for all e-mails
 
 mail.sendMail = function(mailOptions) {
+  console.log(mailOptions);
+  return
   // Send mail with defined transport object
   transporter.sendMail(mailOptions, function(error, info){
-      if(error){
-        console.log('error');
-        return console.log(error);
-      }
-      console.log('Message sent: ' + info.response);
-
+    if(error){
+      console.log('error');
+      return console.log(error);
+    }
+    console.log('Message sent: ' + info.response);
   });
 }
 
