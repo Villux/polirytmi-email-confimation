@@ -19,7 +19,7 @@ var sendConfirmationEmail = function (channelId) {
         return data.user.profile.email;
       });
       emailBody.to = channelMemberEmails.join(";");
-      // send all the emails
+      // Send all the emails
       MailService.sendMail(emailBody);
       return deferred.resolve();
     })

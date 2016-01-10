@@ -23,8 +23,6 @@ var transporter = nodemailer.createTransport({
 // The same transporter object for all e-mails
 
 mail.sendMail = function(mailOptions) {
-  console.log(mailOptions);
-  return
   // Send mail with defined transport object
   transporter.sendMail(mailOptions, function(error, info){
     if(error){
